@@ -38,7 +38,7 @@ def menu():
 
                     global qntd_exec
                     while True:  
-                        print(f'Tarefas disponíveis:\n{tarefa_afazer}')  
+                        print(f'Tarefas disponíveis:\n{','.join(tarefa_afazer)}')  
                         tarefa_ft_exec = input('Digite o nome exato da tarefa que deseja mover para a aba "Executando": ')
                         if tarefa_ft_exec in tarefa_afazer:
                             tarefa_executado.append(tarefa_ft_exec)
@@ -81,7 +81,7 @@ def menu():
 
 
                     while True:
-                        print(f'Tarefas disponíveis:\n{tarefa_afazer + tarefa_executado}')
+                        print(f'Tarefas disponíveis:\n{','.join(tarefa_afazer + tarefa_executado)}')
                         tarefa_ft_pronta = str(input('Digite aqui o nome exato da tarefa a ser movida para a aba "Pronta" : '))
                         
                         if tarefa_ft_pronta in tarefa_afazer:
@@ -114,7 +114,7 @@ def menu():
                     """FUNÇÃO PARA EXCLUIR UMA TAREFA EXISTENTE QUE ESTEJA EM QUALQUER UMA DAS TRÊS ABAS DO SISTEMA"""
 
                     while True:
-                        print(f'Tarefas disponíveis:\n{tarefa_afazer + tarefa_executado + tarefa_pronta}')
+                        print(f'Tarefas disponíveis:\n{','.join(tarefa_afazer + tarefa_executado + tarefa_pronta)}')
                         excluir = str(input('Digite a tarefa a ser excluída: '))
                         if excluir in tarefa_afazer:
                             tarefa_afazer.remove(excluir)
